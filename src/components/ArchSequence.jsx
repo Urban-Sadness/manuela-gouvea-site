@@ -292,6 +292,7 @@ function ScrollSequence({ onOpen }) {
       // STAGE 6 — the drawing dissolves, the photograph is complete
       tl.fromTo(photoOuter, { opacity: 0 }, { opacity: 1, duration: 1.3, ease: 'power1.inOut' }, 7.9)
         .to(q('.arch-focus .ln'), { strokeDashoffset: -1, duration: 1.2, ease: 'power1.in', stagger: 0.15 }, 8.1)
+        .fromTo(q('.seq-title'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 8.6)
         .fromTo(q('.seq-title > *'), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: 'power2.out' }, 8.7)
         .to({}, { duration: 0.6 });
     }, section);
